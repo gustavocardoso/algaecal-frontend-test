@@ -22,7 +22,8 @@ on jQuery, so do use it where *necessary*.
 
 ## Instructions
 1. Clone this repo
-2. Install the packages.
+2. Install the packages. ```npm install```
+3. Run the server ```npm serve```
 
 ### Task 1: Fix the following issues on the page
 1. The 3rd product bundle doesn't match the other two. It should have the blue box around it, but

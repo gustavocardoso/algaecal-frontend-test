@@ -1,54 +1,61 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-const webpack = require('webpack'); //to access built-in plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const sass = require('sass');
 
 module.exports = {
-    module: {
-        rules: [
-            { test: /\.txt$/, use: 'raw-loader' },
-            {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+  module: {
+    rules: [
+      { test: /\.txt$/, use: 'raw-loader' },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        }, {
+          loader: 'eslint-loader',
+          options: {
+            emitWarning: true,
+            configFile: './.eslintrc',
+          },
+        }],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              autoprefixer,
             },
-            {
-                 test: /\.(png|svg|jpg|gif)$/,
-                 use: [
-                   'file-loader'
-                 ]
+          }, {
+            loader: 'sass-loader',
+            options: {
+              implementation: sass,
             },
-            {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                    {
-                        loader: "style-loader",
-                    },
-                    {
-                        loader: "css-loader",
-                    }, {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: () => [require('autoprefixer')]
-                        }
-                    }, {
-                        loader: "sass-loader",
-                        options: {
-                            implementation: require("sass")
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({template: './src/index.html'}),
-        new CopyPlugin([
-            { from: './src/assets', to: './assets' }
-        ]),
-    ]
+          },
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyPlugin([
+      { from: './src/assets', to: './assets' },
+    ]),
+  ],
 };

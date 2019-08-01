@@ -1,12 +1,9 @@
 // import {ProductBundles} from "./modules/ProductBundles";
-import("./styles/main.scss");
-import {loadSVGs} from "./modules/svg-replace";
-import("popper.js");
-import("bootstrap");
+import './styles/main.scss';
+import loadSVGs from './modules/svg-replace';
+import 'popper.js';
+import 'bootstrap';
 
-document.addEventListener("DOMContentLoaded", () =>{
-    loadSVGs();
+document.addEventListener('DOMContentLoaded', () => {
+  loadSVGs();
 });
-
-// const productBundle = new ProductBundles();
-// productBundle.render();
