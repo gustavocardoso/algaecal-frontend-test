@@ -1,0 +1,647 @@
+.citations{
+  word-wrap: break-word;
+}
+
+h1{
+    font-size: 2.25rem;
+  @include media-breakpoint-down(sm){
+      //font-size: 1.5rem;
+      &.vsl-dynamic-headline{
+          font-size: 1.4rem;
+
+      }
+  }
+}
+h2{
+    &.vsl-dynamic-subheadline{
+        line-height: 2.25rem;
+        font-weight: normal;
+
+        &::after{
+            content: '';
+            // background: url('/sp/assets/img/red-arrow.png') center center no-repeat;
+            background-size: contain;
+            display: block;
+            width: 120px;
+            height: 290px;
+            transform: rotate(20deg);
+            position: absolute;
+            right: 26%;
+            top: 95%;
+            z-index: 1;
+        }
+    }
+  @include media-breakpoint-down(sm){
+      font-size: 2.35rem;
+
+      &.vsl-dynamic-subheadline{
+          font-size: 1.5rem;
+          line-height: 1.65rem;
+      }
+  }
+}
+
+h3{
+
+  &.vsl-quiz-results-headline{
+      font-size: 3.5rem;
+      line-height: 2.75rem;
+
+      @include media-breakpoint-down(sm) {
+          font-size: 2.75rem;
+      }
+  }
+}
+
+h5.modal-title{
+    font-size: 2rem;
+}
+
+.rounded-img{
+    border-radius: 1rem;
+}
+
+.dean-circle {
+  max-height:100%;
+  text-align: center;
+  border-bottom:none;
+
+  flex-basis: 190px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.ceo-label{
+    font-size: 1rem;
+}
+
+.dean-ref {
+    width: auto;
+    margin: 20px 0 20px 25%;
+
+    @include media-breakpoint-only(md) {
+        margin-left: 0;
+    }
+
+  img.signature {
+    max-height: 40px;
+  }
+
+  p.text {
+    margin-top: 0.5em;
+    font-size: 1.25rem;
+  }
+}
+
+.vsl-bulletpoints {
+    .feature-icons {
+      color:#000;
+
+      .single-icon {
+        font-size: 1em;
+        display: flex;
+        align-items: baseline;
+        margin-bottom:0.5em;
+
+        &:last-of-type {
+          margin-bottom:0;
+        }
+        @include media-breakpoint-up(md) {
+          margin-bottom:1em;
+        }
+
+        .checkmark {
+          color: $algaecal-green;
+          height: 40px;
+          width: 40px;
+          display: block;
+          overflow: hidden;
+          flex: none;
+          text-align: center;
+          vertical-align: text-top;
+          padding: 8px;
+          margin-right: .5em;
+        }
+        p {
+          margin:0;
+        }
+        img {
+          width:90px;
+          margin-right:1em;
+      }
+    }
+  }
+}
+
+.vsl-healthy-bone{
+    .its-true{
+        color: $algaecal-green;
+        font-size: 2em;
+    }
+}
+
+.vsl-algae-special{
+    &.green-white{
+        .border-edge{
+            width: 20%;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .vsl-tetra-arrow{
+            display: none;
+        }
+    }
+}
+
+.vsl-dynamic-testimonials{
+    .testimonial-header,
+    .testimonial-title {
+        text-align: center;
+    }
+
+    .testimonial-header{
+        font-size: 2.75rem;
+    }
+    .testimonial-title{
+        font-size: 2rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .testimonial-points{
+        .list{
+            .row{
+                border-bottom: none;
+
+                >:first-child .num{
+                    border-bottom: 3px solid $algaecal-green;
+                }
+            }
+        }
+    }
+}
+
+.vsl-laux,
+.vsl-dynamic-testimonials{
+        .redline-big{
+            background-position: center 130%;
+        }
+
+}
+
+section.vsl-step-boxes{
+    h2.color-black{
+        @extend .color-black;
+        font-size: 2rem;
+    }
+    h3.color-orange,
+    &.step-boxes .step-description span{ @extend .color-orange;}
+
+    &.step-boxes{
+        .step-content{
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                    border-bottom: none;
+                img{
+                    margin-left: 15%;
+                }
+            }
+        }
+    }
+}
+
+.vsl-proven{
+    background: $algaecal-green;
+    color: white;
+    .container{
+
+        p{
+            font-size: 2rem;
+            line-height: 2.5rem;
+            span{
+                font-weight: bold;
+                font-style: italic;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 1.4rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        margin: 15px;
+    }
+}
+.vsl-bone-studies{
+    h3{
+        color: $algaecal-green;
+        font-size: 2.5rem;
+        display: inline-block;
+    }
+    a{
+        text-decoration: none;
+    }
+    article{
+        padding-top: 1rem;
+        border-bottom: solid 2px #ccc;
+        @include media-breakpoint-down(sm){
+            border-bottom: none;
+        }
+    }
+    img.fda-logo{
+        max-width: 175px;
+    }
+    .ragus-award{
+        @include media-breakpoint-down(sm){
+            img{
+                max-width: 175px;
+                margin: 0 0 15px 25%;
+            }
+        }
+    }
+
+    .fda-claim{
+        @include media-breakpoint-down(sm){
+            border-top: solid thin #bbb;
+            margin: 5px;
+        }
+    }
+}
+
+.vsl-compare{
+    .compare{
+        h2, p { display: none; }
+
+        .table-striped{
+            tr{
+                td{
+                    border: none;
+                    @include media-breakpoint-down(sm){
+                        padding: .1rem .75rem;
+                    }
+                }
+                >:first-child{
+                    background: white;
+                    color: $algaecal-green;
+                }
+            }
+            tbody tr:nth-of-type(odd){
+                background-color: white;
+            }
+            tbody tr:nth-of-type(even){
+                background-color: #EEF6EE;
+            }
+        }
+        .compareTable .row .cell:nth-child(3){
+            color: #fc0303;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        h2 {
+            text-align: left!important;
+            font-size: 2rem;
+            margin: 0!important;
+        }
+    }
+}
+
+.vsl-learned{
+    .list-headline{
+        text-align: center;
+        color: white;
+        background: $algaecal-green;
+        font-size: 2.5rem;
+        padding: 20px 0;
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.8rem;
+            padding: 20px 15px;
+            text-align: left;
+        }
+    }
+    .list{
+        .row{
+            border-bottom: none!important;
+            .num{
+                border-bottom: 3px solid $algaecal-green;
+            }
+        }
+    }
+
+}
+.vsl-reasons{
+    &.orange-white{
+        background: white;
+        h4{
+            color: black;
+
+            span{
+                color: white;
+                background: $algaecal-green;
+                border-radius: 100%;
+                padding: 4px 14px 2px;
+                float: left;
+                margin-right: 7px;
+            }
+        }
+    }
+
+}
+
+.vsl-introducing-super-food{
+    @include media-breakpoint-down(sm){
+        text-align: center;
+    }
+}
+
+.vsl-bone-sabateurs{
+    h2{
+        @include media-breakpoint-down(sm){
+            font-size: 2rem;
+        }
+    }
+}
+
+.vsl-bottom-buttons{
+  margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    #collapsable-references, #collapsable-references-2 {
+        width: 100%;
+        .card-header{
+            background: $algaecal-blue;
+            text-align: center;
+            padding: 1.2rem;
+
+            a{
+                color: white;
+                text-decoration: none;
+                display: block;
+            }
+        }
+        .card-block{
+            .citations{
+                list-style-type: lower-latin;
+            }
+        }
+        @include media-breakpoint-down(sm){
+            padding: 1.25rem 0;
+        }
+    }
+
+
+    .button3d{
+        &:before{
+            content: '\25b2';
+            left: 15%;
+            top: 20px;
+            position: absolute;
+            font-size: 1rem;
+        }
+    }
+    //@include media-breakpoint-down(sm){
+    //    margin-top:100%;
+    //}
+}
+.m-guarantee.guarantee {
+    .guarantee-advice{
+        box-shadow: none;
+
+        .guarantee-header .guarantee-title{
+            @extend .color-green;
+        }
+    }
+}
+
+.vsl-mobile-highlight{
+    @include media-breakpoint-down(sm){
+        background: #FDF2E5;
+        outline: solid 15px #FDF2E5;
+    }
+}
+
+.vsl-atomic{
+    .background-orange{
+        h2{
+            font-size: 3rem;
+
+        }
+        @include media-breakpoint-down(sm){
+            h2{
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+    .color-blue{
+        color: $algaecal-blue-enhanced;
+    }
+    .color-green{
+        color: #40ad4a;
+    }
+    @include media-breakpoint-down(sm){
+        h2{
+            line-height: 2.5rem;
+        }
+        .vsl-atomic.have-you-seen{
+            padding-top: 1rem;
+        }
+    }
+}
+
+.timer-text{
+    @include media-breakpoint-down(sm){
+        margin-top: 0;
+        font-size: 0.8rem;
+    }
+}
+
+.vsl-verified-studies{
+    a{
+        text-decoration: none;;
+    }
+    @include media-breakpoint-down(sm){
+        a{
+            font-weight: bold;
+        }
+        img.fda-logo{
+            margin-left: 30%;
+        }
+    }
+}
+
+.vsl-faq{
+
+    #faq-accordion, #faq-accordion-1, #nutrient-accordion{
+        .card{
+            border-radius: 0;
+            .card-header{
+                background: white;
+                h5, .h5 {
+                    font-weight: normal;
+                    line-height: 2rem;
+
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        display: flex;
+                        font-weight: bold;
+                        align-items: center;
+
+                        &.vue-accordion{
+                            &:before{
+                                margin-right: 1rem;
+                            }
+                        }
+
+                        &.collapsed{
+                            font-weight: normal;
+                            &:before{
+                                content: '+';
+                            }
+
+                        }
+                        &:before{
+                            content: '-';
+                            color: $algaecal-green;
+                            font-size: 2.5rem;
+                            margin-right: 8px;
+                        }
+                    }
+
+                    @include media-breakpoint-only(sm) {
+                        font-size: 1.45rem;
+                    }
+                }
+
+                &.title{
+                    background: $algaecal-green;
+                    color: white;
+                    border: none;
+                }
+            }
+            .card-block{
+                padding: 1rem;;
+            }
+        }
+    }
+
+  &.apsb6{
+    #faq-accordion #headingTitle{ color: black; background: white;}
+  }
+}
+
+.vsl-references{
+    .green-algae{
+        color: white;
+        background: $algaecal-green url('/sp/assets/img/bg-algae-dark.png') center center;
+        background-size: cover;
+
+        .as-seen {
+            color: black;
+            background: white;
+            font-size: 1rem;
+            padding: 1em;
+            overflow: hidden;
+            height: 250px;
+        }
+    }
+}
+
+.vsl-superfood{
+    padding: 1.5rem 1rem 0.5rem;
+
+    .heading h2{
+        &.intro{
+            font-size: 3rem;
+        }
+        font-size: 2.5rem;
+
+        @include media-breakpoint-down(sm){
+            &.intro{
+                width: 85%!important;
+                font-size: 2.2rem!important;
+            }
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.vsl-free-gifts{
+    background: #FDF3E8;
+
+    h2{
+        font-size: 3rem;
+    }
+
+    hr{
+        border-top: 5px solid white;
+    }
+}
+
+.our-apologies{
+    header h2{
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+}
+
+.vsl-regular-supplements{
+    @include media-breakpoint-down(sm){
+        .header {
+            background: url(/sp/assets/img/background-green.jpg) no-repeat center center;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            h2{
+                font-size: 1.5rem;
+                line-height: 2rem;
+                padding: 1.5rem;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.vsl-introduction{
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm){
+        h2{
+            font-size: 2.5rem;
+        }
+        .dean-circle{
+            width: 40%;
+            float: left;
+            margin-right: 1rem;
+        }
+        .dean-ref{
+            margin: 0;
+        }
+    }
+}
+
+.vsl-marcus-post{
+    @include media-breakpoint-down(sm){
+        h2{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.vsl-featured.card{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.link-style{
+    background: none;
+    border: none;
+    color: $algaecal-blue-dark;
+    text-decoration: underline;
+}

@@ -1,0 +1,355 @@
+$font-weight-normal: 400;
+
+// Make sheet compatible with bs4
+$font-size-medium: 24px!default;
+$font-size-small: 18px!default;
+$font-size-large: 26px!default;
+$screen-md: 1024px!default;
+$screen-sm: 768px !default;
+$screen-sm-max: $screen-sm - 1!default;
+$screen-xs: 480px !default;
+$screen-xs-max: $screen-xs -1 !default;
+
+.highlight-yellow{
+  background-image: url('https://cdn.algaecal.com../assets/img/yellow-highlight.png');
+  background-color:transparent;
+  background-size: 100% 100%;
+}
+.pricelist .highlight-yellow{
+  padding: 9px 26px;
+}
+
+
+.product-options-cta{
+  height:100px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+
+  .cta-button{
+    width: 95%;
+    position:relative;
+    right:44px;
+    text-align:center;
+
+    span{
+      white-space:nowrap;
+      text-indent:70px;
+
+      @media screen and (max-width:430px){
+        text-indent:70px;
+      }
+    }
+  }
+
+  .seal-wrapper{
+    position:relative;
+    right:-50px;
+  }
+  .seal {
+    width: 90px;
+    height: 90px;
+    display: block;
+    position: relative;
+    margin: 0!important;
+    z-index: 1;
+  }
+}
+
+
+.purchase-options-new-cta{
+  margin-top:80px;
+
+  .product-title{
+    margin: 5px;
+  }
+
+  .most-popular{
+    margin-top:-60px;
+    width:auto;
+  }
+  .product-image img{
+    height:auto;
+    display:block;
+    margin:auto;
+    width:200px;
+    max-width:80%;
+  }
+  .product-box-wrapper{
+    margin:20px auto;
+    .dollar-sign{ vertical-align:super; font-size:70%;  }
+
+    padding: 3px 8px 8px;
+
+    &.most-popular{
+      //margin-top: 0; padding: 3px 8px 8px;
+      background-color: $algaecal-bluegreen;
+      box-shadow: -1px 0px 13px 0px rgba(100, 100, 100, 0.75);
+    }
+
+    #bundle-product-name{
+      color: $black;
+      font-weight:$font-weight-heavy;
+    }
+    .bundle-product-description{
+      font-weight:$font-weight-normal;
+      font-size:26px;
+      color:$algaecal-bluegreen;
+      margin:4px;
+    }
+    .most-popular-label{
+      text-transform:uppercase;
+      color: $white;
+    }
+
+    .product-box{
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-radius:0;
+      background-color:white;
+      box-shadow: -1px 0px 13px 0px rgba(100,100,100,0.75);
+      color: $black;
+      text-align:center;
+
+      h3{
+        color:black;
+        font-width:$font-weight-heavy;
+      }
+
+      .price{
+        .currency{
+          transform: translateY(-22%);
+          display: inline-block;
+          text-decoration: underline;
+          font-size:$font-size-small;
+        }
+
+        font-size: $font-size-large*1.5;
+        color: $black;
+        font-weight:$font-weight-heavy;
+      }
+
+      .price-per-day{
+        @extend .highlight-yellow;
+        font-size: $font-size-medium*.8;
+        .amount,.dollar-sign{ font-weight:$font-weight-heavy;}
+
+      }
+    }
+
+    .percent-off{
+      background-color:$algaecal-orange;
+      color:$white;
+      height: 70px;
+      width: 70px;
+      border-radius:200px;
+      position:absolute;
+      top:-20px;
+      right:34px;
+      box-shadow: -1px 0px 13px 0px rgba(100,100,100,0.75);
+
+      .label {
+        .amount{ font-size:125%; }
+        font-size:18px;
+        padding: 20px;
+        left:50%;
+        transform: translate(-50%, 0);
+        position:absolute;
+      }
+
+      @media screen and (max-width: $screen-sm-max){
+        top: -46px;
+        right: 67px;
+      }
+      @media screen and (max-width: $screen-xs-max){
+        top: -60px;
+      }
+    }
+  }
+
+  .product-box-wrapper.most-popular{ margin-top:-35px; }
+
+  .most-popular{
+    .percent-off{
+      top:-61px;
+      right:14px;
+    }
+  }
+}
+.three-by-cta {
+  .percent-off{
+    transform:translateX(70%);
+  }
+  .most-popular .percent-off{
+    transform:translateX(60%);
+  }
+
+  @media screen and (max-width: $screen-md){
+    .percent-off{
+      transform:translateX(0);
+    }
+    .most-popular .percent-off{
+      left:50%;
+      transform:translate(220%);
+    }
+  }
+}
+
+.product-box-wrapper{
+  max-width: 400px;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .product-box-wrapper {
+    margin: auto !important;
+    .percent-off {
+      left: 50%;
+      transform: translateX(220%);
+    }
+  }
+}
+
+@media screen and (max-width:450px){
+  .product-box-wrapper .percent-off {
+    transform: translateX(135%) !important;
+  }
+}
+
+$pricelist-height: 240px;
+$header-height: 100px;
+
+.prices-horizontal{
+}
+
+.bundle-container{
+  margin-top:35px;
+}
+.container-header{
+
+  margin: 10px 0 0;
+  padding: 1px 11px 1px;
+
+  h2{
+    color:$white;
+    text-align:center;
+  }
+
+  &.feature{
+    background-color: $algaecal-green!important;
+  }
+}
+
+.pricelist{
+  padding-left: 0;
+  padding-right: 0;
+
+  .bonegrowthguarantee{
+    margin-bottom:-20px;
+    margin-left:-23px;
+    margin-top:-37px;
+    z-index:100;
+  }
+
+  .btn{
+
+  }
+
+  header{
+    background-color: $algaecal-blue!important;
+  }
+
+
+}
+.feature{
+  background-color: $algaecal-green!important;
+}
+
+.cell{
+  height: $pricelist-height;
+  text-align: center;
+  position:relative;
+
+  strong{
+    font-size:1.2em;
+  }
+  .inner-cell {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+  }
+  img{
+    max-height: $pricelist-height;
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .bonegrowthguarantee{
+    position:relative;
+  }
+
+}
+
+.bundle-container{
+  .container-header{
+    color: white;
+    padding: 0 0 .2em;
+  }
+  padding: .6em;
+  border-radius: 10px 6px 6px 10px;
+  cursor: pointer;
+
+  background-color: $algaecal-blue;
+
+  .feature{
+    background-color: $algaecal-green!important;
+  }
+
+  .pricelist{
+    background-color: white;
+  }
+}
+
+//.pricelist .product-image{
+//  max-height: $pricelist-height - 10px;
+//  max-width: 100%;
+//}
+
+.savings{
+  color: $algaecal-red-lighter;
+  font-weight:700;
+  margin: 4px 10px 0 0;
+  font-size: $font-size-large*.85;
+}
+
+.most-popular{
+  font-size: $font-size-large*1.2;
+  display: block;
+  margin: auto;
+  width: 209px;
+  line-height: 2;
+  color: #666;
+  font-weight: 700;
+  background: $algaecal-yellow url('../assets/img/redline.png') no-repeat 48% 82%;
+  background-size: 145px 8px;
+}
+
+@media screen and (max-width: $screen-sm){
+  .pricelist{
+    .cell{
+        height: auto;
+        display:block;
+        position:static;
+    }
+    .inner-cell{
+      position: static;
+      display:block;
+      width:auto;
+      transform:none!important;
+    }
+  }
+}

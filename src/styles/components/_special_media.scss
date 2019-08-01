@@ -1,0 +1,242 @@
+div.most-popular-arrow-wrap {
+  position: relative;
+  display:block;
+  top: -40px;
+  left:-26px;
+  overflow:visible;
+
+  .recommended-text{
+    position:absolute;
+    text-align:center;
+    z-index:101;
+    right:-66px;
+    font-size:24px;
+    top:-27px;
+    color: $algaecal-red;
+    font-family: $font-family-handwriting;
+  }
+
+  .most-popular-arrow {
+    height: 179px;
+    width: 100px;
+    position: absolute;
+    z-index: 100;
+    right: -72px;
+    top: 2px;
+    display: block;
+    background: no-repeat url('/sp/assets/img/arrow-tall-red.png');
+    background-size: contain;
+  }
+
+  .most-popular-arrow.tall{
+    height: 460px;
+    right: -16px;
+    top: 43px;
+  }
+}
+
+.norton-seal{
+  background-color: transparent!important;
+}
+
+ul.credit-card-logos{
+  margin: 0;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    color: $gray;
+    font-size: 32px;
+
+    &:active{
+      color: $algaecal-orange;
+    }
+  }
+
+}
+
+.cvv-explanation{
+  text-decoration: underline;
+  line-height:2.2;
+}
+.credit-card-logos .match{
+  color: $algaecal-orange;
+}
+
+.security-seals-list{
+  background-color: transparent!important;
+  height: 41px;
+
+  li{
+    display: inline-block;
+  }
+}
+.red-underline{
+  display: inline;
+  //line-height: 1.2;
+  background: url(/sp/assets/img/redline.png) repeat-x 0 80%;
+  padding-bottom: 8px;
+  position: relative;
+}
+.yellow-underline{
+  display: inline;
+  line-height: 1.2;
+  background: url(/sp/assets/img/yellowline.png) repeat-x 0 95%;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+
+.timer-text {
+    // color: $algaecal-orange;
+    // font-weight: 700;
+    // border: 2px solid #ccc;
+    // border-radius: 40px;
+    color: $black;
+    font-size:.85em;
+    padding: .4em .8em;
+    margin-bottom: 19px;
+    margin-top:10px;
+
+  strong{
+    // color: $algaecal-red-lighter;
+    font-size: 1.15em;
+  }
+}
+
+.bonus-box{
+  display: block;
+  border: 4px dashed $algaecal-green;
+  background-color: $gray-lighter;
+  border-radius: 28px;
+  padding: 28px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+
+
+/* Starburst */
+.special10percent{
+  position:absolute;
+  bottom:-3px;
+  left:-53px;
+}
+.starburst {
+  font: 1em/1.4 'Glober', georgia, serif;
+  font-weigth:700;
+  background: $algaecal-orange;
+  width: 4.5em;
+  height: 4.5em;
+  text-align: center;
+  color: $almost-black;
+  z-index:100;
+}
+
+
+
+.starburst span {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.starburst:before,
+.starburst:after ,
+.starburst span:before,
+.starburst span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  transform: rotate(30deg);
+}
+
+.starburst:after {
+  transform: rotate(-30deg);
+}
+
+.starburst span:after {
+  transform: rotate(30deg);
+}
+.starburst span:before {
+  transform: rotate(-30deg);
+}
+
+#starburst {
+  position: absolute;
+  //margin-top: -7.75em;
+  //margin-left: .75em;
+  padding-top:17px;
+  padding-left:0;
+  white-space:nowrap;
+}
+#starburst span{
+  left: 75%;
+  transform: rotate(-45deg);
+}
+
+.video-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+.order-overlay{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  background-color: rgba($white,.9);
+  h2{ margin:auto;}
+
+  &.hidden{
+    display:none!important;
+  }
+}
+
+.gray-box{
+  background-color: $gray-lightest;
+  border: 2px solid $gray-lighter;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.heavy{
+  font-weight:$font-weight-heavy;
+}
+
+//.highlight-yellow{
+//  background-color: $algaecal-yellow;
+//  padding: 7px 3px 0;
+//}
+
+.success-stories-list{
+    h4{
+        color: $algaecal-green;
+        font-style: italic;
+    }
+    .ss-list{
+        .row{
+            height: 450px;
+        }
+        .customer-name,
+        .customer-location{
+            font-size: 1rem;
+        }
+    }
+}

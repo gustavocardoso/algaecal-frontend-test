@@ -1,0 +1,84 @@
+/* @import must be at top of file, otherwise CSS will not work */
+$glober-font-path: '/assets/fonts/webfonts' !default;
+
+@font-face {
+    font-family: 'Glober';
+    src: url('#{$glober-font-path}/glober-regular.eot');
+    src: url('#{$glober-font-path}/glober-regular.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-regular.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-regular.woff') format('woff'),
+         url('#{$glober-font-path}/glober-regular.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-regular.svg#glober_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glober';
+    src: url('#{$glober-font-path}/glober-regular-italic.eot');
+    src: url('#{$glober-font-path}/glober-regular-italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-regular-italic.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-regular-italic.woff') format('woff'),
+         url('#{$glober-font-path}/glober-regular-italic.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-regular-italic.svg#globerregular_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Glober';
+    src: url('#{$glober-font-path}/glober-bold.eot');
+    src: url('#{$glober-font-path}/glober-bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-bold.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-bold.woff') format('woff'),
+         url('#{$glober-font-path}/glober-bold.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-bold.svg#globerbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Glober';
+    src: url('#{$glober-font-path}/glober-bold-italic.eot');
+    src: url('#{$glober-font-path}/glober-bold-italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-bold-italic.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-bold-italic.woff') format('woff'),
+         url('#{$glober-font-path}/glober-bold-italic.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-bold-italic.svg#globerbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GloberBook';
+    src: url('#{$glober-font-path}/glober-book.eot');
+    src: url('#{$glober-font-path}/glober-book.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-book.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-book.woff') format('woff'),
+         url('#{$glober-font-path}/glober-book.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-book.svg#globerbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GloberBookItalic';
+    src: url('#{$glober-font-path}/glober-book-italic.eot');
+    src: url('#{$glober-font-path}/glober-book-italic.eot?#iefix') format('embedded-opentype'),
+         url('#{$glober-font-path}/glober-book-italic.woff2') format('woff2'),
+         url('#{$glober-font-path}/glober-book-italic.woff') format('woff'),
+         url('#{$glober-font-path}/glober-book-italic.ttf') format('truetype'),
+         url('#{$glober-font-path}/glober-book-italic.svg#globerbook_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'AgiloHandwritingPro';
+  src: url('#{$glober-font-path}/32014F_0_0.eot');
+  src: url('#{$glober-font-path}/32014F_0_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$glober-font-path}/32014F_0_0.woff2') format('woff2'),
+  url('#{$glober-font-path}/32014F_0_0.woff') format('woff'),
+  url('#{$glober-font-path}/32014F_0_0.ttf') format('truetype');
+}

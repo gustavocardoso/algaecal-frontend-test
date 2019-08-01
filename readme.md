@@ -5,12 +5,50 @@ candidate and look forward to reviewing your results!
 
 Tips:
 
-* **Git:** be sure to use expressive messages on your commits
+* **Git:** be sure to commit often and use expressive messages on your commits.
 * **Code Quality:** make sure your code is clear to someone who is experienced reading code. 
-Use comments sparingly to add clarity where it might be lacking. You can also use add comments
+Use comments sparingly only to add clarity where it might be lacking. You can also add comments
 to explain any choices or shortcuts you may have taken since this is a skills test. JS should
-follow to AirBnB style guide (although we are not strict on this) https://github.com/airbnb/javascript
-
+generally follow the AirBnB style guide (although we are not strict on this) 
+https://github.com/airbnb/javascript
+* **Browser Compatibility:** the only requirement is that it must run in the latest Chrome browser, you are
+encouraged to use modern features. It should be responsive, looking good on mobile and desktop and
+everything in between.
+* **Node Modules** Add any node modules you like. Make sure I can easily install them when I pull your
+repo with a simple ```npm install``` command.
+* **jQuery** Avoid using jQuery. We are currently in the process of converting our code from jQuery so we
+would love to see a demonstration of your coding without jQuery. Unfortunately, Bootstrap modules are dependent
+on jQuery, so do use it where *necessary*.
 
 ## Instructions
-1. 
+1. Clone this repo
+2. Install the packages.
+
+### Task 1: Fix the following issues on the page
+1. The 3rd product bundle doesn't match the other two. It should have the blue box around it, but
+the prices are not formatted correctly. Also "You Save $x" should be Red ($algaecal-red) for all
+pricing bundles. And the dollar sign is missing in multiple places.
+2.  The video doesn't play when it is clicked on. We have set up a custom overlay image but a click
+event needs to trigger the video to play. (see: https://wistia.com/support/developers/player-api)
+3. Clicking on "Scientific References" creates a jerky transition. Please adjust it to work more like
+the accordion of the FAQ above it.
+4. The guarantee seal on the "Add to Cart" button is not positioned correctly. Please adjust it to match
+the provided screenshot.
+5. There is a bubble over the 1 Month Bonebuilder Pack that says "0% Off" -- if the amount is 0, it doesn't
+make sense to show the bubble. Hide (but do not deletee) this bubble (in a real world page like this, the bubble 
+could change to have a value >0 if a coupon were added).
+6. The product boxes should all be the same height. For the "Most popular" product box, this means the interior
+white box should line up in height with the other two product boxes.
+
+### Task 2: 
+1. Add a new section following the "As Seen On" section but preceeding the pricing bundles. It should 
+match the screen shot. The link should open up a modal window that populates with our 7-month guarantee.
+2. Use an ajax request to populate this modal. The data that you need to request can be found here:
+https://www.algaecal.com/wp-json/acf/v3/options/options ... populate it with the acf.7yr_full_copy 
+3. Notice the guarantee contains a wistia video. Make sure this video loads and is playable.
+
+### Task 3:
+1. We encourage our customers to call us, but we aren't able to accept calls 24 hours a day. Our hours of operation
+can be found in our api as well, https://www.algaecal.com/wp-json/acf/v3/options/options as acf.office_hours
+2. In the header we have a message that says "Speak to our Bone Health Consultants!". When our call center
+is closed, this message should be hidden. Don't forget about timezones.

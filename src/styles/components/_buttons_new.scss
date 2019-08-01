@@ -1,0 +1,280 @@
+//
+// Buttons
+// --------------------------------------------------
+//
+// Updated to include our custom 3d styles
+
+
+// Variables
+//
+// @todo: replace this with v4-compatible scripting
+// --------------------------------------------------
+$state-primary-bg:               lighten($primary, 40%);
+$state-secondary-bg:             lighten($secondary, 40%);
+$state-success-bg:               lighten($success, 40%);
+$state-info-bg:                  lighten($info, 40%);
+$state-warning-bg:               lighten($warning, 40%);
+$state-danger-bg:                lighten($danger, 40%);
+
+$btn-default-color:              $white;
+$btn-default-bg:                 $success;
+$btn-default-border:             $state-success-bg;
+
+$btn-primary-color:              $btn-default-color;
+$btn-primary-bg:                 $primary;
+$btn-primary-border:             $state-primary-bg;
+
+$btn-secondary-color:            $btn-default-color;
+$btn-secondary-bg:               $gray-light;
+$btn-secondary-border:           $gray-lighter;
+
+$btn-success-color:              $btn-default-color;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $state-success-bg;
+
+$btn-info-color:                 $btn-default-color;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $state-info-bg;
+
+$btn-warning-color:              $btn-default-color;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $state-warning-bg;
+
+$btn-danger-color:               $btn-default-color;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $state-danger-bg;
+
+
+$btn-transition: background-color .2s ease-in-out, box-shadow .1s ease-in-out, transform .1s ease-in-out !default;
+$btn-transition-timing: ease-in-out !default;
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn,
+.button,
+.dropdown-menu > li a.btn {
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border-style: solid;
+  border-width: 0 0 1px;
+  color: $btn-default-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: $btn-font-weight;
+  line-height: 1;
+  margin-bottom: 0; // For input.btn
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, .35);
+  touch-action: manipulation;
+  transition: $btn-transition;
+  transition-timing-function: $btn-transition-timing;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include button-size-new($btn-padding-y, $btn-padding-x, $font-size-base, $line-height-base, $btn-border-radius);
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    transform: translate(0,.222em);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    @include opacity(.65);
+  }
+
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn,
+.btn-default,
+.button {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+.btn-primary,
+.woocommerce-Button {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+// Success appears as green
+.btn-success,
+.brand_green .button {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.btn-info,
+.brand_blue .button {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning,
+.brand_orange .button {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $link-color;
+  font-weight: normal;
+  border-radius: 0;
+  text-shadow: none;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    @include box-shadow(none);
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size-new($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-base, $btn-border-radius);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size-new($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-base, $btn-border-radius);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// 2D Button
+// --------------------------------------------------
+.btn-flat {
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:hover,
+  &:active:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+// Decorated Buttons
+// --------------------------------------------------
+
+// @todo: make these more universal & responsive
+.btn-seal{
+  margin: 29px 0;
+  padding-left: 69px;
+  position: relative;
+  transition: none;
+
+  @include media-breakpoint-only(md) {
+    font-size: .9em;
+    padding-left: 75px;
+    width: 95%;
+  }
+
+  .seal{
+    width:90px;
+    height:90px;
+    position:absolute;
+    left: -14px;
+    top: -21px;
+
+    @include media-breakpoint-only(md) {
+      height: 85px;
+      width: 85px;
+    }
+  }
+
+  &:active {
+    .seal {
+      top: -25px;
+    }
+  }
+}

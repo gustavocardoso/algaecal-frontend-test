@@ -1,0 +1,21 @@
+/* @import must be at top of file, otherwise CSS will not work */
+$glober-font-path: '/assets/fonts/webfonts' !default;
+
+
+
+//@import url("//hello.myfonts.net/count/316613");
+@font-face {font-family: 'GloberBook';src: url('#{$glober-font-path}/316613_0_0.eot');src: url('#{$glober-font-path}/316613_0_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_0_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_0_0.woff') format('woff'),url('#{$glober-font-path}/316613_0_0.ttf') format('truetype');}
+@font-face {font-family: 'Glober';font-weight: bold;font-style: normal;src: url('#{$glober-font-path}/316613_1_0.eot');src: url('#{$glober-font-path}/316613_1_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_1_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_1_0.woff') format('woff'),url('#{$glober-font-path}/316613_1_0.ttf') format('truetype');}
+@font-face {font-family: 'Glober';font-weight: bold;font-style: italic;src: url('#{$glober-font-path}/316613_2_0.eot');src: url('#{$glober-font-path}/316613_2_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_2_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_2_0.woff') format('woff'),url('#{$glober-font-path}/316613_2_0.ttf') format('truetype');}
+@font-face {font-family: 'GloberBookItalic';src: url('#{$glober-font-path}/316613_3_0.eot');src: url('#{$glober-font-path}/316613_3_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_3_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_3_0.woff') format('woff'),url('#{$glober-font-path}/316613_3_0.ttf') format('truetype');}
+@font-face {font-family: 'Glober';font-weight: normal;font-style: normal;src: url('#{$glober-font-path}/316613_4_0.eot');src: url('#{$glober-font-path}/316613_4_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_4_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_4_0.woff') format('woff'),url('#{$glober-font-path}/316613_4_0.ttf') format('truetype');}
+@font-face {font-family: 'Glober';font-weight: normal;font-style: italic;src: url('#{$glober-font-path}/316613_5_0.eot');src: url('#{$glober-font-path}/316613_5_0.eot?#iefix') format('embedded-opentype'),url('#{$glober-font-path}/316613_5_0.woff2') format('woff2'),url('#{$glober-font-path}/316613_5_0.woff') format('woff'),url('#{$glober-font-path}/316613_5_0.ttf') format('truetype');}
+
+@font-face {
+  font-family: 'AgiloHandwritingPro';
+  src: url('#{$glober-font-path}/32014F_0_0.eot');
+  src: url('#{$glober-font-path}/32014F_0_0.eot?#iefix') format('embedded-opentype'),
+  url('#{$glober-font-path}/32014F_0_0.woff2') format('woff2'),
+  url('#{$glober-font-path}/32014F_0_0.woff') format('woff'),
+  url('#{$glober-font-path}/32014F_0_0.ttf') format('truetype');
+}

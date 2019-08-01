@@ -1,0 +1,174 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  font-family: inherit;
+}
+
+.button3d{
+  @include button2(8,$algaecal-green, $white);
+
+  width: 70%;
+  span{
+    width: 100%;
+  }
+}
+
+
+
+@mixin button($border-radius, $background-color, $text-color){
+  background-color: $background-color;
+  color: $text-color;
+  font-weight:700;
+
+  margin-right:10px;
+  font-weight:700;
+  font-size:1.1em;
+  border-radius:$border-radius;
+
+  box-shadow: -2px 1px 5px 0px rgba(darken($background-color,60%),0.65);
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.04);
+    color: $text-color;
+  }
+}
+
+.btn-orange{
+  @include button(3px, $algaecal-orange, $white);
+}
+
+.btn-gray{
+  @include button(3px, $gray, $white);
+}
+
+.text-alert{
+  color: $algaecal-red;
+}
+
+.btn-full-width{
+  width: 98%;
+  padding: .4em;
+  display: block;
+  white-space: normal;
+  margin: 1em auto;
+}
+
+.btn-green{
+  background-color: $algaecal-green;
+  color: $white;
+  font-weight:700;
+
+  margin-right:10px;
+  font-weight:700;
+  font-size:1.1em;
+  border-radius:3px;
+
+  -webkit-box-shadow: -1px 1px 11px 0px rgba(darken($algaecal-green,60%),0.75);
+  -moz-box-shadow: -1px 1px 11px 0px rgba(darken($algaecal-green,60%),0.75);
+  box-shadow: -1px 1px 11px 0px rgba(darken($algaecal-green,60%),0.75);
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.04);
+  }
+}
+
+.button-gray{
+  color:white !important;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 10px 0 0;
+  padding: 2px 15px;
+  background-color: $gray;
+}
+.button-pencil:before{
+  content: $icon-pencil;
+  font-family: $icon-font;
+  font-size:24px;
+  font-weight: 100;
+  margin-right: 4px;
+}
+
+.process-my-order-button{
+  background-image: url('../assets/img/order_button_with_seal.png');
+  font-size: 2.7em;
+  height: 181px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding-top:10px;
+  color: white;
+  font-weight: 700;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  vertical-align:middle;
+  padding-right:100px;
+
+//  //@include button(3px, $algaecal-orange, $white);
+//  //padding: 1em 3em 1em 1em;
+//  //font-size: 1.8em !important;
+}
+
+@media screen and (max-width: $screen-sm){
+  .process-my-order-button{
+    padding: 5px 0 0!important;
+    font-size:32px!important;
+    background-image: url('../assets/img/order_button.png');
+    height: 110px;
+  }
+}
+
+.button-small{
+  color: white !important;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 2px 3px;
+  margin: 0 10px 0 0;
+}
+.button-small:before{
+  font-size: 10px;
+  font-weight: 100;
+  margin-right: 4px;
+}
+
+
+.read-more-fade-out{
+  color: white;
+  background-color: $algaecal-orange;
+  border-radius: 10px;
+  padding: 12px;
+  margin: auto;
+  display: block;
+  width: 120px;
+  text-align: center;
+
+
+}
+
+.fade-out{
+  max-height: 120px;
+  position: relative;
+  overflow: hidden;
+
+  .the-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0; padding: 20px 0;
+
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, white);
+
+    a{
+      @include button(3px, $algaecal-orange, $white);
+      position:relative;
+      bottom:-20px;
+      margin:auto;
+    }
+  }
+}

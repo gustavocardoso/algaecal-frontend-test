@@ -1,0 +1,779 @@
+/* --- End from Bootstrap --- */
+
+body, h1,h2,h3,h4,h5,h6,div,span,p,section,article{
+  font-family: $font-family-base;
+}
+body{
+  font-size: $font-size-base;
+  padding-left: $padding-base-horizontal;
+  padding-right: $padding-base-horizontal;
+}
+
+.red-text{
+  color: $algaecal-red;
+}
+
+.stop-image{
+  height: 60px;
+  margin: 15px;
+}
+
+h1,h2,h3,h4{
+  font-weight:$headings-font-weight;
+}
+
+.highlight-yellow{
+  background-color: $algaecal-yellow;
+  padding: 7px 3px 0;
+}
+
+.navbar{
+  margin-bottom: 0;
+}
+
+.strikethrough {
+  position: relative;
+}
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 36%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: inherit;
+  color: red;
+
+  -webkit-transform:rotate(-20deg);
+  -moz-transform:rotate(-20deg);
+  -ms-transform:rotate(-20deg);
+  -o-transform:rotate(-20deg);
+  transform:rotate(-20deg);
+}
+
+.horizontal:before{
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+  transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+}
+
+.red-strikethrough{
+  display: inline;
+  line-height: 1.2;
+  background: url(../assets/img/redline.png) repeat-x 0 25%;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.orange{
+  color: $algaecal-orange;
+}
+.red{
+  color: $algaecal-red;
+}
+.blue{
+  color: $algaecal-blue;
+}
+.green{
+  color: $algaecal-green;
+}
+.darkgreen{
+  color: $algaecal-green-dark;
+  font-weight: 700;
+}
+.orange-light {
+  color: $algaecal_orange-lighter;
+}
+.greenblue {
+  color: $brand-greenblue;
+}
+.red-light {
+  color: $algaecal-red-lighter;
+}
+.yellow{
+  color: $algaecal-yellow;
+}
+
+.font-size-medium-large{
+  font-size:22px!important;
+
+  @media screen and (min-width: $screen-sm){
+    font-size:32px!important;
+  }
+}
+
+@media screen and (max-width:$screen-sm){
+  h1{
+    font-size: 25px;
+    margin-top:0;
+  }
+  h2{
+    font-size: 30px;
+    margin-top:0;
+  }
+}
+
+
+// Header
+.main-page-header{
+  margin-top: 1em;
+
+  a, a:hover{
+    text-decoration:none;
+  }
+}
+.header-phone-number{
+  font-weight: $font-weight-heavy;
+
+  @media screen and (min-width:$screen-sm) {
+    a {
+      font-size: 24px;
+    }
+  }
+}
+.header-phone-number-label{
+  color: $black;
+  text-decoration: none;
+  font-size: 24px;
+}
+.header-phone-number-label-mobile{
+  color: $black;
+  float:left;
+}
+
+.speak-to-our-bone-specialists {
+  font-size: 1.2rem;
+  .green-circle {
+    color:$white;
+    vertical-align: middle;
+    background:$algaecal-green;
+
+    font-size: 1.15em;
+    width: 2.6em;
+    text-align: center;
+    line-height: 1em;
+    padding: .18em .29em;
+    border-radius: 3em;
+  }
+}
+a.speak-to-specialist{
+  color: $black;
+  font-size:18px;
+}
+.header-phone-number-section{
+  text-align:left;
+
+  @media screen and (min-width:$screen-sm){
+    text-align:right;
+  }
+}
+.alphabody{
+  padding:0;
+}
+.header-logo{
+  width:170px;
+}
+header{
+  a.phone-number{
+    text-decoration:none;
+
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+
+.underline-red {
+  display: inline;
+  line-height: 1.2;
+  background: url(../assets/img/redline.png) repeat-x 0 95%;
+  padding-bottom: 8px;
+  position: relative;
+  background-size: contain;
+}
+.uppercase{
+  text-transform:uppercase;
+}
+
+.font-weight-normal{
+  font-weight:$font-weight-normal;
+}
+.font-weight-heavy{
+  font-weight:$font-weight-heavy;
+}
+.color-orange{
+  color: $algaecal-orange;
+}
+.color-orange-bright{
+  color: $algaecal-orange-bright;
+}
+.color-green{
+  color: $algaecal-green;
+}
+.color-green-dark{
+  color:$algaecal-green-dark;
+}
+.color-bluegreen{
+  color:$algaecal-bluegreen;
+}
+.color-blue{
+  color:$algaecal-blue;
+}
+.color-blue-dark{
+  color:$algaecal-blue-dark;
+}
+.color-white{
+  color: $white;
+}
+.color-black{
+  color: $black;
+}
+.color-red{
+  color: $algaecal-red;
+}
+.color-red-dark{
+  color: $algaecal-red-dark;
+}
+.guarantee-box{
+  background: #f6f6f6;
+  border: 2px solid #76c55f;
+  padding: 15px;
+  width: 100%;
+}
+.background-blue{
+  background-color:$algaecal-blue;
+}.background-blue-dark{
+   background-color:$algaecal-blue-dark;
+ }
+.background-bluegreen-dark{
+  background-color:$algaecal-bluegreen-dark;
+}
+.background-bluegreen{
+  background-color:$algaecal-bluegreen;
+}
+.background-gray{
+  background-color:$gray;
+}
+.background-gray-lightest{
+  background-color:$gray-lightest;
+}
+.background-white{
+  background-color:$white;
+}
+.background-orange{
+  background-color:$algaecal-orange;
+}
+.background-orange-dark{
+  background-color:$algaecal-orange-dark;
+}
+.background-orange-bright{
+  background-color:$algaecal-orange-bright!important;
+}
+.background-green{
+  background-color:$algaecal-green!important;
+}
+.background-green-dark{
+  background-color:$algaecal-green-dark;
+}
+// Show and Hide Wistia
+.vertical-wipe{
+  max-height: 0;
+  overflow: hidden;
+  @include transition( all 2s ease);
+}
+.show-it{
+  max-height: 100%;
+  overflow: visible;
+  @include transition( all 2s ease);
+}
+
+.highlight-yellow{
+  background-image: url('https://cdn.algaecal.com../assets/img/yellow-highlight.png');
+  background-color: transparent;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  // padding: 9px 26px;
+  padding: 7px 3px 0;
+  filter: brightness(1.1);
+
+}
+.header-logo{
+  max-width: 40vw;
+}
+
+.js-read-more{ display:none; } // initially hidden
+
+.order-overlay{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  background-color: rgba($white,.9);
+  h2{ margin:auto;}
+
+  &.hidden{
+    display:none!important;
+  }
+  .order-progress-container{
+    box-shadow: 0 0 .75rem rgba(0,0,0,.5)!important;
+  }
+}
+
+.seal{
+  max-width: 150px;
+  float: left;
+  margin-right: 20px;
+}
+
+.item-product-image{
+  max-width: 120px;
+}
+
+.fb_iframe_widget>span{
+  display:block;margin:auto;
+}
+.background-orange{
+  background-color:$algaecal-orange;
+}
+.background-light-orange{
+  background-color: #fee1bd; // lighten($algaecal-orange,37%);
+}
+.special-orange-box{
+  @extend .background-light-orange;
+  border:solid 2px $algaecal-orange-dark;
+  padding-left: 90px!important;
+  padding-top: 36px!important;
+}
+.redline-big{
+  background:url(../assets/img/redlinebig.png) no-repeat center 99%;
+}
+.green-bottom{
+  border-bottom: 2px solid $algaecal-green-dark;
+}
+.border-right-black{
+  border-right: 2px solid black;
+}
+.orange-btm {
+  background: #eb8714;
+  padding: 5px 15px;
+  //width: 80%;
+  margin: 10px 0;
+
+  a{
+    color: $white;
+    text-decoration:none;
+  }
+}
+
+.list-italicize li{
+  font-style:italic;
+  list-style-type:none;
+}
+.margin-neg-30p{
+  margin-top: -30px;
+}
+.border-green-bottom{
+  border-bottom:2px solid $algaecal-green;
+}
+
+a.no-underline{
+  text-decoration:none;
+}
+.product-box-wrapper{
+  cursor:pointer;
+}
+
+.upsell-cta-button{
+  color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+
+#guarantee{
+  .modal-header{
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  .modal-title{
+    color: $algaecal-green;
+  }
+
+  .modal-body{
+    padding: 15px 25px;
+    overflow: hidden;
+
+    h2:not(:first-child){
+      margin: 1.2rem 0 1rem;
+    }
+    h3{
+      font-size: 1.5rem;
+      margin-top: 15px;
+    }
+
+    img.wp-image-62567 {
+      margin: 1rem -25px;
+      width: 108%;
+
+      @include media-breakpoint-down(sm){
+        width: 120%;
+      }
+    }
+    ol {
+      margin: 15px 0;
+      counter-reset: item;
+      list-style-type: none;
+
+      li{
+        margin: 15px 0;
+        counter-increment: item;
+
+        &::before{
+          content: counter(item);
+          background: $algaecal-green;
+          color: $white;
+          font-size: 1.2rem;;
+          padding: 1px 10px 2px 10px;
+          border-radius: 100%;
+          margin: 0px 10px 0px -35px;
+          width: 1em;
+        }
+
+        p{
+          margin: 15px 0;
+        }
+      }
+    }
+
+    a{ text-decoration:none;
+      &:hover{
+        text-decoration:underline;
+      }
+    }
+  }
+}
+
+
+.page-header{
+  a, a:hover{
+    text-decoration:none;
+  }
+}
+.header-phone-number{
+  font-weight: $font-weight-heavy;
+}
+.header-phone-number-label{
+  color: $black;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.header-phone-number-label-mobile{
+  color: $black;
+}
+
+.speak-to-our-bone-specialists {
+  font-size: 1.2rem;
+
+}
+.green-circle {
+  background: $algaecal-green;
+  fill: $algaecal-green;
+  display: inline-block;
+  padding: .2em .3em;
+  border-radius: 1em;
+  &:before{
+    color:$white;
+  }
+}
+.background-white{
+  background-color:$white;
+}
+.as-seen-on-row{
+  background-color: $gray-lightest;
+  padding: 1em;
+}
+
+
+#loading {position:absolute;left:calc(50% - 100px);top:calc(50% - 25px);z-index:9999}
+.uil-ripple {position:absolute;left:calc(50% - 90px);top:calc(50% - 90px);opacity:.5;z-index:999}
+
+.ld-l {opacity:0;animation: ld-in 3s 0.0s ease infinite;}
+.ld-o {opacity:0;animation: ld-in 3s 0.1s ease infinite;}
+.ld-a {opacity:0;animation: ld-in 3s 0.2s ease infinite;}
+.ld-d {opacity:0;animation: ld-in 3s 0.3s ease infinite;}
+.ld-i {opacity:0;animation: ld-in 3s 0.4s ease infinite;}
+.ld-n {opacity:0;animation: ld-in 3s 0.5s ease infinite;}
+.ld-g {opacity:0;animation: ld-in 3s 0.6s ease infinite;}
+
+@keyframes ld-in {
+  0% {opacity:0;transform:scale(0);}
+  30% {opacity:1;transform:scale(1);}
+  100% {opacity:1;transform:scale(1);}
+}
+
+.page-header{
+  //border-bottom: 3px solid $gray-light;
+  padding-bottom: .5em;
+  @include media-breakpoint-up(sm) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.font-size-medium-large {
+  font-size: 22px !important;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 32px !important;
+  }
+}
+.play-button-overlay, .custom-wistia-play-button{
+  width:100%;
+  position:absolute;
+  z-index:10;
+  left: 0;
+  cursor:pointer;
+
+  &.hover{
+    opacity: 0.85;
+    transition: opacity 0.2s ease ;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+ul.checkbox-list {
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+
+  li {
+    padding-left: 1.3em;
+    margin: 1em 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+
+    &:before {
+      content: $icon-checked;
+      color: $algaecal-green;
+      font-family: $icon-font;
+      display: inline-block;
+      width: 1.6em; /* same as padding-left set on li */
+    }
+  }
+}
+
+.font-heavy{
+  font-weight: $font-weight-heavy;
+}
+.font-weight-normal{
+  font-weight: $font-weight-base;
+}
+.text-uppercase{
+  text-transform:uppercase;
+}
+
+.hidden{ display: none;}
+
+.popover{
+  width: 300px;
+  height: auto;
+  max-width: none;;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  .popover-title,
+  .popover-header{
+    color: $white;
+    text-shadow: 0 -1px 1px rgba(76,129,61,0.7);
+    background: $algaecal-green;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ebebeb;
+
+  }
+  .popover-content{
+    font-size: 16px;
+    padding: 8px 16px;
+
+  }
+}
+
+// Remove 'USD' from North American prices
+// body.US,
+// body.CA {
+//     .currency{
+//         display: none!important;
+//     }
+// }
+
+.ss-modal-customer{
+  font-size: 1rem;
+}
+
+#successStoriesModal{
+  a.all-success-stories-link{
+    @include media-breakpoint-down(sm){
+      font-size: .8rem;
+    }
+  }
+}
+
+.geo-shipping{
+  span{
+    line-height: 1.25em;
+    color: $algaecal-gray;
+    font-weight: bold;
+    display: block;
+  }
+}
+
+// Form Field Styles
+form input.form-control {
+  margin: 6px auto;
+  height: 50px;
+  outline: 0 !important;
+  background: #FFF;
+  border: 1px solid #dadada;
+  border-radius: 5px !important;
+}
+
+form-control:focus{
+  border-color: #000;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(0,0,0,0.6);
+}
+
+.helper-label,select{
+  font-weight:400;
+}
+
+.helper-label{
+  position: absolute;
+  top: 38%;
+  left: 24px;
+  display: block;
+  z-index: 10;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.helper-label.up,
+input:focus + .helper-label{
+  top: 19%;
+  font-size: 11px;
+  color: #8e8e8e;
+}
+
+// Touch scroll on modals for iOS
+.modal-open .modal{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.border-green{
+  border: solid thin $algaecal-green;
+}
+
+.border-width-md{
+  border-width: 5px;
+}
+
+.font-size-2rem{
+  font-size: 2rem;
+}
+
+a.read-more{
+  color: $algaecal-blue-dark;
+  &.collapsed{
+    &:before{
+      content: '+';
+    }
+
+  }
+  &:before{
+    content: '-';
+    color: $algaecal-green;
+    font-size: 2.5rem;
+    vertical-align: sub;
+    margin-right: .25rem;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $algaecal-blue-dark;
+  }
+}
+
+.bordered-heading-banner{
+  border-top: 10px solid $algaecal-orange;
+  border-bottom: 10px solid $algaecal-orange;
+}
+
+@mixin header-line-on-side($lineColor, $lineWidth, $lineStyle){
+  overflow: hidden;
+
+  span{
+    display: inline-block;
+    position: relative;
+
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      border-bottom: $lineStyle $lineWidth $lineColor;
+      top: 30%;
+      width: 100%;
+    }
+
+    &:before{
+      right: 100%;
+      margin-right: 10px;
+    }
+
+    &:after{
+      left: 100%;
+      margin-left: 10px;
+    }
+  }
+}
+
+.header-line-on-side-orange{
+  @include header-line-on-side($algaecal-orange, 8px, solid);
+}
+
+.header-line-on-side-blue{
+  @include header-line-on-side($algaecal-blue, 6px, solid);
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.icon-phone{
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.sticky-body-cta{
+  padding-bottom: 5.5rem!important;
+}

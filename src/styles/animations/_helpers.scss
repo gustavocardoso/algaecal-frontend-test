@@ -1,0 +1,15 @@
+@mixin transition($args...) {
+  transition: $args;
+}
+
+.vertical-wipe{
+  max-height: 0;
+  overflow: hidden;
+  @include transition( all 2s ease);
+}
+
+.show-it{
+  max-height: 4500px;
+  overflow: visible;
+  @include transition( all 2s ease);
+}

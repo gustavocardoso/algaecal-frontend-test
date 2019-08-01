@@ -1,0 +1,71 @@
+.triple-power-faq{
+
+  .card {
+    box-shadow: none;
+    margin: 0 0 10px;
+  }
+
+  .card-title,
+  .card-body {
+    border: none;
+    padding: 0;
+  }
+
+}
+
+.faq-item {
+  background: $white;
+  border: none;
+  padding: 10px 10px 0;
+  transition: all .3s ease-in-out;
+  
+  .card-header {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .card-title {
+    font-weight: normal;
+
+    a {
+      color: black;
+      display: flex;
+      align-items: center;
+
+      &:hover{
+        text-decoration: none;
+      }
+
+      &:before {
+        content: '-';
+        color: $algaecal-blue-dark;
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: .55;
+        margin-right: 10px;
+
+      }
+      &.collapsed {
+        &:before {
+          content: '+';
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 0 2.5rem;
+
+    .recipe-signup {
+      background: $white;
+
+      @include media-breakpoint-down(sm) {
+        border: 1px solid #ccc;
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
+        width: calc(100% + 5rem);
+      }
+    }
+  }
+}

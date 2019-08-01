@@ -4,3 +4,4 @@ dist
 .gitignore
 .log
 .txt
+.DS_Store

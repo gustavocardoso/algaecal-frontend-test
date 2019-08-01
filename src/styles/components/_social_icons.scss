@@ -1,0 +1,82 @@
+.social-media-links{
+  margin: 0 auto;
+  padding: 0;
+
+  a{
+    font: 0/0 a;
+    color: white!important;
+    display: inline-block;
+    margin: 10px;
+    text-decoration:none;
+    cursor:pointer;
+  }
+  a:before {
+    font-family: $icon-font!important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 30px;
+    background-color: white;
+    font-family:icomoon;
+    border-radius: 30px;
+    padding:6px;
+  }
+  a.amazon:before {
+    content: $icon-amazon;
+  }
+  a.instagram:before {
+    content: $icon-instagram;
+  }
+  a.wikipedia {
+    &:before {
+      color: black;
+      content: $icon-wikipedia;
+    }
+  }
+  a.twitter:before{
+    content: $icon-twitter;
+  }
+  a.facebook:before{
+    content: $icon-facebook;
+  }
+  a.youtube:before{
+    content: $icon-youtube;
+  }
+  a.pinterest:before{
+    content: $icon-pinterest;
+  }
+  /* social media icons color */
+  a[title="Facebook"]:before{
+    background: rgb(59,89,152);
+    fill: rgb(59,89,152);
+  }
+  a[title="YouTube"]:before{
+    background: rgb(230,33,23);
+  }
+  a[title="Twitter"]:before{
+    background: rgb(19,161,242);
+    fill: rgb(19,161,242);
+  }
+  a[title="Pinterest"]:before{
+    background: rgb(202,26,33);
+    fill: rgb(202,26,33);
+  }
+  a[title="Amazon"]:before{
+    background: rgb(35,31,32);
+  }
+  a[title="Wikipedia"]:before{
+    background: #fff;
+  }
+  a[title="Instagram"]:before{
+    background: rgb(113,107,167); /* Old browsers */
+    background: -moz-linear-gradient(225deg, rgba(113,107,167,1) 0%, rgba(118,102,173,1) 1%, rgba(139,94,161,1) 8%, rgba(142,89,159,1) 10%, rgba(150,86,154,1) 13%, rgba(158,82,154,1) 15%, rgba(161,77,152,1) 17%, rgba(167,77,149,1) 18%, rgba(197,47,134,1) 30%, rgba(201,53,131,1) 34%, rgba(203,57,122,1) 37%, rgba(210,62,120,1) 41%, rgba(210,64,114,1) 42%, rgba(222,76,99,1) 53%, rgba(228,81,87,1) 59%, rgba(230,86,78,1) 61%, rgba(235,88,71,1) 66%, rgba(238,90,66,1) 67%, rgba(241,93,62,1) 69%, rgba(243,126,69,1) 78%, rgba(241,131,73,1) 79%, rgba(245,161,81,1) 89%, rgba(243,167,85,1) 92%, rgba(246,171,88,1) 98%, rgba(246,172,88,1) 99%, rgba(243,174,82,1) 99%, rgba(242,168,91,1) 100%)!important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(225deg, rgba(113,107,167,1) 100%,rgba(118,102,173,1) 99%,rgba(139,94,161,1) 92%,rgba(142,89,159,1) 90%,rgba(150,86,154,1) 87%,rgba(158,82,154,1) 85%,rgba(161,77,152,1) 83%,rgba(167,77,149,1) 82%,rgba(197,47,134,1) 70%,rgba(201,53,131,1) 66%,rgba(203,57,122,1) 63%,rgba(210,62,120,1) 59%,rgba(210,64,114,1) 58%,rgba(222,76,99,1) 47%,rgba(228,81,87,1) 41%,rgba(230,86,78,1) 39%,rgba(235,88,71,1) 34%,rgba(238,90,66,1) 33%,rgba(241,93,62,1) 31%,rgba(243,126,69,1) 22%,rgba(241,131,73,1) 21%,rgba(245,161,81,1) 11%,rgba(243,167,85,1) 8%,rgba(246,171,88,1) 2%,rgba(246,172,88,1) 1%,rgba(243,174,82,1) 1%,rgba(242,168,91,1) 0%)!important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(225deg, rgba(113,107,167,1) 0%,rgba(118,102,173,1) 1%,rgba(139,94,161,1) 8%,rgba(142,89,159,1) 10%,rgba(150,86,154,1) 13%,rgba(158,82,154,1) 15%,rgba(161,77,152,1) 17%,rgba(167,77,149,1) 18%,rgba(197,47,134,1) 30%,rgba(201,53,131,1) 34%,rgba(203,57,122,1) 37%,rgba(210,62,120,1) 41%,rgba(210,64,114,1) 42%,rgba(222,76,99,1) 53%,rgba(228,81,87,1) 59%,rgba(230,86,78,1) 61%,rgba(235,88,71,1) 66%,rgba(238,90,66,1) 67%,rgba(241,93,62,1) 69%,rgba(243,126,69,1) 78%,rgba(241,131,73,1) 79%,rgba(245,161,81,1) 89%,rgba(243,167,85,1) 92%,rgba(246,171,88,1) 98%,rgba(246,172,88,1) 99%,rgba(243,174,82,1) 99%,rgba(242,168,91,1) 100%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#716ba7', endColorstr='#f2a85b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}

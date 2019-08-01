@@ -1,0 +1,143 @@
+// Grays
+// -------------------------
+
+$black:                  #000;
+$almost-black:           #000;
+$gray-darker:            $black; //#67676e;
+$gray-dark:              $black; //#728086;
+$gray:                   #9ca6ae;
+$gray-light:             #c7cdd3;
+$gray-lighter:           #f6f6f6;
+$gray-lightest:          #efefef;
+$almost-white:           #f7f7f7;
+$white:                  #ffffff;
+
+// Brand colors
+// -------------------------
+
+$algaecal-green: #46ac4e;
+$algaecal-green-dark: #299266;
+$algaecal-bluegreen: #20c4c7;
+$algaecal-bluegreen-dark: #148ba3;
+$algaecal-orange: #e9872a;
+$algaecal-orange-dark: #e2783c;
+$algaecal-orange-bright: #dc6b00;
+$algaecal-gray: rgb(99,100,102); // taken from logo color in brandbook
+$algaecal-yellow: rgb(254,218,68);
+
+
+$algaecal-green:        $brand-green!default;
+$algaecal-green-dark:   $algaecal-green-dark; //darken($algaecal-green, 15%)!default;
+$brand-blue:            #08b5e5!default;
+$algaecal-blue:         $brand-blue!default;
+$algaecal-blue-dark:    #197ca6!default;
+$algaecal-blue-enhanced: #0196ae!default;
+$brand-orange:          $algaecal-orange!default;
+$algaecal_orange:       $brand-orange!default;
+$algaecal_orange-lighter: rgb(255,232,193)!default;
+$brand-greenblue:       #53b8bf!default;
+$algaecal-red:          #cb1829!default;
+$algaecal-red-lighter:  lighten($algaecal-red, 10%)!default;
+$algaecal-red-dark:     darken($algaecal-red,10%)!default;
+$algaecal-yellow:       rgb(255,255,70)!default;
+
+$brand-primary:         $brand-greenblue;
+$brand-green:           $algaecal-green;
+
+$brand-success:         $brand-green;
+$brand-warning:         $brand-orange;
+$brand-danger:          #ef1e1e;
+$brand-info:            $brand-blue;
+
+/** beta update **/
+$primary: $brand-primary;
+$success: $brand-success;
+$warning: $brand-warning;
+$danger: $brand-danger;
+$info: $brand-info;
+
+/* Special Colors */
+$facebook-blue: #3b5998;
+
+
+$yiq-contrasted-threshold: 160;
+
+// Links
+// -------------------------
+
+$link-color:            $algaecal-blue-dark;
+$link-hover-color:      $gray;
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif:  'Glober', Helvetica, Arial, sans-serif;
+$font-family-handwriting: 'AgiloHandwritingPro';
+$font-family-serif:       'Times New Roman', Times, serif;
+//$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+$font-family-primary:    $font-family-base;
+$icon-font:               'algaecal-icons';
+
+$font-weight-heavy:   700;
+
+
+
+$body-bg:       $white;
+$body-color:    $black;
+$inverse-bg:    $black;
+$inverse-color: $white;
+
+/**
+ * Re-add relative positioning from v4 alpha
+ */
+.container {
+    position: relative;
+}
+
+/* Buttons */
+$btn-default-color: $white;
+$btn-default-bg:                 $brand-success;
+$btn-default-border:             #dff0d8;
+$btn-transition: background-color .2s ease-in-out, box-shadow .1s ease-in-out, transform .1s ease-in-out !default;
+$btn-transition-timing: ease-in-out !default;
+
+$cursor-disabled:           not-allowed;
+
+// Bootstrap functions
+//
+// Utility mixins and functions for evalutating source code across our variables, maps, and mixins.
+
+// Color contrast
+@function color-yiq-reverse($color) {
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+    @if ($yiq >= $yiq-contrasted-threshold) {
+        @return $yiq-text-light;
+    } @else {
+        @return $yiq-text-dark;
+    }
+}
+
+// Font Sizes
+$font-size-base: 1.2rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+$font-size-xs:   .75rem !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$font-size-h1: 2.5rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.75rem !default;
+$font-size-h4: 1.5rem !default;
+$font-size-h5: 1.25rem !default;
+$font-size-h6: 1rem !default;

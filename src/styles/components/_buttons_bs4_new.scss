@@ -1,0 +1,308 @@
+//
+// Buttons
+// --------------------------------------------------
+//
+// Updated to include our custom 3d styles
+
+// Base styles
+// --------------------------------------------------
+
+.btn,
+.button,
+.dropdown-menu > li a.btn {
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  margin-bottom: 0; // For input.btn
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  @include hover-focus() {
+    text-decoration: none;
+  }
+
+  &:not(.disabled):not([disabled]) {
+    &:active,
+    &.active {
+      border-width: 0 1px 2px;
+      outline: 0;
+      transform: translate(0,5px);
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    opacity: .65;
+  }
+
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value);
+  }
+}
+
+// Color fix for warning buttons
+.btn-warning {
+  @include hover-focus() {
+    color: $white;
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @if $color == "light" {
+      @include button-outline-variant($value, $gray-900);
+    } @else {
+      @include button-outline-variant($value, $white);
+    }
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  box-shadow: none;
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+  text-shadow: none;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+// 2D Button
+// --------------------------------------------------
+.btn-flat {
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:hover,
+  &:active:focus {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+// Decorated Buttons
+// --------------------------------------------------
+
+// General decoration styles so we don't have to enter them every time
+.btn {
+  position: relative;
+
+  &:before,
+  &:after {
+    display: inline-block;
+    font-family: $icon-font;
+    font-weight: $font-weight-normal;
+    line-height: inherit;
+    position: absolute;
+    speak: none;
+    text-align: center;
+    width: 1.5em;
+  }
+
+  &:before {
+    left: 5px;
+  }
+
+  &:after {
+    right: 5px;
+  }
+}
+
+.btn-play,
+input.btn-go {
+  padding-right: ( $btn-padding-x / $font-size-base * 1em ) + 1.25em;
+
+  &.btn-sm {
+    padding-right: ( $btn-padding-x-sm / $font-size-sm * 1em ) + 1.25em;
+  }
+
+  &.btn-lg {
+    padding-right: ( $btn-padding-x-lg / $font-size-lg * 1em ) + 1.25em;
+  }
+}
+
+.btn-play {
+
+  &:after{
+    content: "\e602";
+  }
+}
+
+.btn-go {
+
+  &:after {
+    content: '\25BA';
+    line-height: 1;
+    margin: 0 -.5em 0 .5em;
+    position: relative;
+    right: auto;
+    top: .1em;
+  }
+}
+
+input.btn-go,
+input.btn-play {
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 1em;
+}
+
+input.btn-go {
+  background-image: url('/wp-content/themes/algaecal/img/btn-go.png');
+}
+
+.btn-locked {
+
+  padding-left: ( $btn-padding-x / $font-size-base * 1em ) + 1.25em;
+
+  &.btn-sm {
+    padding-left: ( $btn-padding-x-sm / $font-size-sm * 1em ) + 1.25em;
+  }
+
+  &.btn-lg {
+    padding-left: ( $btn-padding-x-lg / $font-size-lg * 1em ) + 1.25em;
+  }
+}
+
+.btn-locked {
+
+  &:before {
+    content: $icon-locked;
+  }
+}
+
+.btn-toggle {
+  padding-left: 60px;
+  text-align: left;
+
+  &:before {
+    content: $icon-minus;
+    left: 15px;
+  }
+
+  &.collapsed:before {
+    content: $icon-plus;
+  }
+}
+
+// @todo: make these more universal & responsive
+.btn-seal{
+  margin: map-get($spacers,3) 0;
+  padding-left: 90px;
+  position: relative;
+  transition: none;
+
+  @include media-breakpoint-only(lg) {
+    font-size: .9em;
+    padding-left: 70px;
+    width: 95%;
+  }
+
+  .seal {
+    width:90px;
+    height:90px;
+    position:absolute;
+    left: -14px;
+    top: -21px;
+
+    @include media-breakpoint-only(lg) {
+      height: 85px;
+      width: 85px;
+    }
+  }
+
+  &:active {
+    .seal {
+      top: -25px;
+    }
+  }
+}
