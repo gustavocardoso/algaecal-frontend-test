@@ -9,8 +9,7 @@ Tips:
 * **Code Quality:** make sure your code is clear to someone who is experienced reading code. 
 Use comments sparingly only to add clarity where it might be lacking. You can also add comments
 to explain any choices or shortcuts you may have taken since this is a skills test. JS should
-generally follow the AirBnB style guide (although we are not strict on this) 
-https://github.com/airbnb/javascript
+follow the AirBnB style guide. https://github.com/airbnb/javascript
 * **Browser Compatibility:** the only requirement is that it must run in the latest Chrome browser, you are
 encouraged to use modern features. It should be responsive, looking good on mobile and desktop and
 everything in between.

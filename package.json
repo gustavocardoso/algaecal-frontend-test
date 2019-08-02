@@ -1,7 +1,7 @@
 {
   "name": "algaecaltest",
-  "version": "1.0.0",
-  "description": "Thank you for taking the time to take our test. We're excited to have you as a  candidate and look forward to reviewing your results!",
+  "version": "1.2.0",
+  "description": "Front end web developer test project",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch --mode=development",
