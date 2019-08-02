@@ -4,8 +4,8 @@
   "description": "Front end web developer test project",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production",
+    "start": "webpack --watch --mode=development",
     "serve": "serve dist",
     "pretest": "eslint --ignore-path .gitignore . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
