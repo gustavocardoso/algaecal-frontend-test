@@ -11,22 +11,21 @@ candidate and look forward to reviewing your results!
 
 ### Task 1: Fix the following issues on the page
 1. The 3rd product bundle doesn't match the other two. It should have the blue box around it, but
-the prices are not formatted correctly. Also "You Save $x" should be Red ($algaecal-red) for all
-pricing bundles. And the dollar sign is missing in multiple places.
+the prices are not formatted correctly. Also "You Save $x" should be Red (#ff0000) for all
+pricing bundles. And the dollar sign is missing in multiple places. The color of the \"Most Popular\"
+wrapper should be #0196ae
 2.  The video doesn\'t play when it is clicked on. We have set up a custom overlay image but a click
 event needs to trigger the video to play. (see: https://wistia.com/support/developers/player-api)
 3. Clicking on "Scientific References" creates a jerky transition. Please adjust it to work more like
 the accordion of the FAQ above it.
-4. The guarantee seal on the "Add to Cart" button is not positioned correctly. Please adjust it to match
-the provided screenshot.
 5. There is a bubble over the 1 Month Bonebuilder Pack that says "0% Off" -- if the amount is 0, it doesn\'t
-make sense to show the bubble. Hide (but do not deletee) this bubble (in a real world page like this, the bubble 
+make sense to show the bubble. Hide (but do not delete) this bubble (in a real world page like this, the bubble 
 could change to have a value >0 if a coupon were added).
 6. The product boxes should all be the same height. For the "Most popular" product box, this means the interior
 white box should line up in height with the other two product boxes.
 
 ### Task 2: 
-1. Add a new section following the "As Seen On" section but preceeding the pricing bundles. It should 
+1. Add a new section following the "As Seen On" section but preceding the pricing bundles. It should 
 match the screen shot. The link should open up a modal window that populates with our 7-month guarantee.
 2. Use an ajax request to populate this modal. The data that you need to request can be found here:
 https://www.algaecal.com/wp-json/acf/v3/options/options ... populate it with the acf.7yr_full_copy 
