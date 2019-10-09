@@ -56,9 +56,11 @@ $screen-xs-max: $screen-xs -1 !default;
   }
 }
 
-.purchase-options-new-cta {
-  margin-top: 80px;
+.bundle-list-container {
+  margin-top: 80px !important;
+}
 
+.purchase-options-new-cta {
   .product-title {
     margin: 5px;
   }
@@ -71,12 +73,10 @@ $screen-xs-max: $screen-xs -1 !default;
     height: auto;
     display: block;
     margin: auto;
-    width: 200px;
+    width: 100%;
     max-width: 80%;
   }
   .product-box-wrapper {
-    margin: 20px auto;
-
     .dollar-sign {
       vertical-align: super;
       font-size: 70%;
@@ -88,6 +88,7 @@ $screen-xs-max: $screen-xs -1 !default;
     }
 
     .you-save {
+      font-size: $font-size-medium;
       color: red;
       font-weight: bold;
       margin: 0px auto 10px;
@@ -113,7 +114,8 @@ $screen-xs-max: $screen-xs -1 !default;
       margin: 4px;
     }
     .most-popular-label {
-      text-transform: uppercase;
+      font-size: $font-size-medium * 0.8;
+      font-style: italic;
       color: $white;
     }
 
@@ -189,7 +191,7 @@ $screen-xs-max: $screen-xs -1 !default;
   }
 
   .product-box-wrapper.most-popular {
-    margin-top: -35px;
+    margin-top: -30px;
   }
 }
 
@@ -307,11 +309,9 @@ $header-height: 100px;
 }
 
 .most-popular {
-  font-size: $font-size-large * 1.2;
   display: block;
   margin: auto;
   width: 209px;
-  line-height: 2;
   color: #666;
   font-weight: 700;
   background: $algaecal-yellow url('../assets/img/redline.png') no-repeat 48% 82%;
