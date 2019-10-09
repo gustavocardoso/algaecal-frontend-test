@@ -9,4 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSVGs();
   app().handleProductsBoxes();
   app().handleOfficeHours();
+  app().handleHighlightVideo();
 });

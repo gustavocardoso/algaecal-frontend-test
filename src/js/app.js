@@ -31,6 +31,22 @@ function app() {
         callCenterMsgElement.classList.add('closed-now');
       }
     },
+
+    handleHighlightVideo() {
+      const videoOverlay = document.querySelector('.play-button-overlay');
+
+      videoOverlay.addEventListener('click', () => {
+        /* eslint no-underscore-dangle: 0 */
+        window._wq = window._wq || [];
+        window._wq.push({
+          id: 'zwflowymel',
+          onReady(video) {
+            video.play();
+            videoOverlay.remove();
+          },
+        });
+      }, false);
+    },
   };
 }
 
