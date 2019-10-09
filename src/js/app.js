@@ -26,15 +26,13 @@ function app() {
       const startingHour = parseInt(parseInt(officeHours[currentDay].starting_time, 10) / 100, 10);
       const closingHour = parseInt(parseInt(officeHours[currentDay].closing_time, 10) / 100, 10);
       const callCenterMsgElement = document.querySelector('.speak-to-our-bone-specialists');
-
-      if (vancouverHour <= startingHour || vancouverHour >= closingHour) {
-        callCenterMsgElement.classList.add('closed-now');
+      if (vancouverHour >= startingHour && vancouverHour < closingHour) {
+        callCenterMsgElement.classList.add('now-open');
       }
     },
 
     handleHighlightVideo() {
       const videoOverlay = document.querySelector('.play-button-overlay');
-
       videoOverlay.addEventListener('click', () => {
         /* eslint no-underscore-dangle: 0 */
         window._wq = window._wq || [];

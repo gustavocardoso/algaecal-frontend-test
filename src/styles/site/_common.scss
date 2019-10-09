@@ -303,10 +303,11 @@ a.no-underline{
 }
 
 .speak-to-our-bone-specialists {
+  display: none !important;
   font-size: 1.2rem;
   
-  &.closed-now {
-    display: none !important;
+  &.now-open {
+    display: block !important;
   }
 
 }
