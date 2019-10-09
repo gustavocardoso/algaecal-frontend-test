@@ -15,7 +15,7 @@ function app() {
     },
 
     async handleOfficeHours() {
-      // Fetch data from API
+      // Fetch office hours data from API
       const response = await fetch('https://www.algaecal.com/wp-json/acf/v3/options/options');
       const data = await response.json();
       // Get office hours
