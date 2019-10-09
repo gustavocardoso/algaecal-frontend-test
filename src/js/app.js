@@ -21,7 +21,7 @@ function app() {
       // Get office hours
       const officeHours = data.acf.office_hours;
       // Get Vancouver current hour from moment.js
-      const vancouverHour = moment().tz('America/Vancouver').format('h');
+      const vancouverHour = moment().tz('America/Vancouver').format('H');
       const currentDay = new Date().getDay();
       const startingHour = parseInt(parseInt(officeHours[currentDay].starting_time, 10) / 100, 10);
       const closingHour = parseInt(parseInt(officeHours[currentDay].closing_time, 10) / 100, 10);
