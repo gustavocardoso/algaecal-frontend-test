@@ -56,7 +56,7 @@ async function app() {
       // set content
       modalTitleElement.innerHTML = modalTitle;
       modalContentElement.innerHTML = modalContent;
-    }
+    },
   };
 }
 

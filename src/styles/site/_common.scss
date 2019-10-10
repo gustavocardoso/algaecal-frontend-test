@@ -692,6 +692,7 @@ a.read-more{
       padding-bottom: 5px;
 
       @media screen and (max-width: 480px) {
+        width: 100px;
         margin-left: 0;
       }
     }
