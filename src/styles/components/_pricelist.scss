@@ -112,7 +112,6 @@ $screen-xs-max: $screen-xs -1 !default;
     .dollar-sign {
       vertical-align: super;
       font-size: 70%;
-      font-weight: normal;
     }
 
     .currency {
@@ -126,14 +125,15 @@ $screen-xs-max: $screen-xs -1 !default;
       font-weight: bold;
       margin: -10px auto 10px;
       line-height: 1.2em;
+      padding-bottom: 20px;
     }
 
-    padding: 3px 8px 8px;
+    padding: 3px 15px 8px;
 
     &.most-popular {
-      //margin-top: 0; padding: 3px 8px 8px;
       background-color: $algaecal-blue-enhanced;
       box-shadow: -1px 0px 13px 0px rgba(100, 100, 100, 0.75);
+      padding: 3px 7px 28px 7px;
     }
 
     #bundle-product-name {
@@ -149,6 +149,7 @@ $screen-xs-max: $screen-xs -1 !default;
     .most-popular-label {
       font-size: $font-size-medium * 0.8;
       font-style: italic;
+      font-weight: 700;
       color: $white;
       margin: 2px 0;
     }
@@ -202,9 +203,12 @@ $screen-xs-max: $screen-xs -1 !default;
 
     .percent-off {
       background-color: $algaecal-orange;
+      filter: brightness(1.1);
+      font-weight: 700;
+      text-transform: uppercase;
       color: $white;
-      height: 70px;
-      width: 70px;
+      height: 65px;
+      width: 65px;
       border-radius: 200px;
       position: absolute;
       top: 20px;
@@ -217,10 +221,14 @@ $screen-xs-max: $screen-xs -1 !default;
 
       .label {
         .amount {
-          font-size: 125%;
+          display: inline-block;
+          font-size: 1.5em;
+          margin-bottom: 2px;
         }
-        font-size: 18px;
-        padding: 20px;
+
+        font-size: .7em;
+        font-weight: 700;
+        padding: 18px;
         left: 50%;
         transform: translate(-50%, 0);
         position: absolute;
@@ -229,7 +237,7 @@ $screen-xs-max: $screen-xs -1 !default;
   }
 
   .product-box-wrapper.most-popular {
-    margin-top: -30px;
+    margin-top: -33px;
   }
 }
 
