@@ -1,6 +1,10 @@
 import moment from 'moment-timezone';
 
-function app() {
+async function app() {
+  // Fetch data from API
+  const response = await fetch('https://www.algaecal.com/wp-json/acf/v3/options/options');
+  const data = await response.json();
+
   return {
     handleProductsBoxes() {
       // Get all product boxes
@@ -14,10 +18,7 @@ function app() {
       });
     },
 
-    async handleOfficeHours() {
-      // Fetch office hours data from API
-      const response = await fetch('https://www.algaecal.com/wp-json/acf/v3/options/options');
-      const data = await response.json();
+    handleOfficeHours() {
       // Get office hours
       const officeHours = data.acf.office_hours;
       // Get Vancouver current hour from moment.js
@@ -45,6 +46,17 @@ function app() {
         });
       }, false);
     },
+
+    handleGuaranteeModal() {
+      // get modal data
+      const modalTitle = data.acf['7yr_title'];
+      const modalContent = data.acf['7yr_full_copy'];
+      const modalTitleElement = document.querySelector('#guarantee .modal-title');
+      const modalContentElement = document.querySelector('#guarantee .modal-body');
+      // set content
+      modalTitleElement.innerHTML = modalTitle;
+      modalContentElement.innerHTML = modalContent;
+    }
   };
 }
 

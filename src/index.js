@@ -5,9 +5,11 @@ import 'popper.js';
 import 'bootstrap';
 import app from './js/app';
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   loadSVGs();
-  app().handleProductsBoxes();
-  app().handleOfficeHours();
-  app().handleHighlightVideo();
+  const application = await app();
+  application.handleProductsBoxes();
+  application.handleOfficeHours();
+  application.handleHighlightVideo();
+  application.handleGuaranteeModal();
 });
