@@ -130,6 +130,10 @@ $screen-xs-max: $screen-xs -1 !default;
       color: $black;
       text-align: center;
 
+      @media screen and (max-width: 480px) {
+        margin-bottom: 40px;
+      }
+
       h3 {
         color: black;
         font-weight: $font-weight-heavy;
